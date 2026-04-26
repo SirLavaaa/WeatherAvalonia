@@ -15,6 +15,13 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    
+     <StackPanel Margin="20" Spacing="10">
+		<TextBox Text="{Binding City}" Watermark="Enter city..." />
+
+        <Button Content="Get weather" Command="{Binding GetWeatherCommand}" />
+
+        <TextBox IsReadOnly="True" Text="{Binding Temperature}"/>
+        <TextBox IsReadOnly="True" Text="{Binding Pressure}"/>
+    </StackPanel>
 
 </Window>

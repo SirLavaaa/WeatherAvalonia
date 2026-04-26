@@ -9,14 +9,26 @@ namespace WeatherAvalonia.Models
     {
         [JsonProperty("main")]
         public MainWeatherInfo Main { get; set; }
+        [JsonProperty("wind")]
+        public WindInfo Wind { get; set; }
     }
 
     public class MainWeatherInfo
     {
-        [Newtonsoft.Json.JsonProperty("temp")]
+        [JsonProperty("temp")]
         public double Temp { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("pressure")]
+        [JsonProperty("pressure")]
         public double Pressure { get; set; }
+
+        [JsonProperty("feels_like")]
+        public double FeelsLike { get; set; }
+    }
+    public class WindInfo
+    {
+        [JsonProperty("speed")]
+        public double Speed { get; set; }
+        [JsonProperty("gust")]
+        public double Gust { get; set; }
     }
 }

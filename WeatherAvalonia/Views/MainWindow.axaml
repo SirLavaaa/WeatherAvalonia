@@ -22,6 +22,9 @@
 
         <TextBox IsReadOnly="True" Text="{Binding Temperature}"/>
         <TextBox IsReadOnly="True" Text="{Binding Pressure}"/>
+        <TextBox IsReadOnly="True" Text="{Binding FeelsLike}"/>
+        <TextBox IsReadOnly="True" Text="{Binding Speed}"/>
+        <TextBox IsReadOnly="True" Text="{Binding Gust}"/>
     </StackPanel>
 
 </Window>

@@ -19,12 +19,25 @@
 		<TextBox Text="{Binding City}" Watermark="Enter city..." />
 
         <Button Content="Get weather" Command="{Binding GetWeatherCommand}" />
+         <Grid 
+      HorizontalAlignment="Left" 
+      VerticalAlignment="Top" 
+      Width="700" 
+      Height="500"
+      ColumnDefinitions="Auto,*,*,*,*"
+      RowDefinitions="Auto,Auto,Auto,Auto,Auto">
 
-        <TextBox IsReadOnly="True" Text="{Binding Temperature}"/>
-        <TextBox IsReadOnly="True" Text="{Binding Pressure}"/>
-        <TextBox IsReadOnly="True" Text="{Binding FeelsLike}"/>
-        <TextBox IsReadOnly="True" Text="{Binding Speed}"/>
-        <TextBox IsReadOnly="True" Text="{Binding Gust}"/>
+        <Image MaxHeight="35" Source="/Assets/temp.jpg" Grid.Column="0" Grid.Row="0"></Image>
+        <Image MaxHeight="35" Source="/Assets/pressure.webp" Grid.Column="0" Grid.Row="1"></Image>
+        <Image MaxHeight="35" Source="/Assets/feelslike.webp" Grid.Column="0" Grid.Row="2"></Image>
+        <Image MaxHeight="35" Source="/Assets/speed.jpg" Grid.Column="0" Grid.Row="3"></Image>
+        <Image MaxHeight="35" Source="/Assets/gust.webp" Grid.Column="0" Grid.Row="4"></Image>
+        <TextBox IsReadOnly="True" Text="{Binding Temperature}" Grid.Column="1" Grid.Row="0"/>
+        <TextBox IsReadOnly="True" Text="{Binding Pressure}" Grid.Column="1" Grid.Row="1"/>
+        <TextBox IsReadOnly="True" Text="{Binding FeelsLike}" Grid.Column="1" Grid.Row="2"/>
+        <TextBox IsReadOnly="True" Text="{Binding Speed}" Grid.Column="1" Grid.Row="3"/>
+        <TextBox IsReadOnly="True" Text="{Binding Gust}" Grid.Column="1" Grid.Row="4"/>
+             </Grid>
     </StackPanel>
 
 </Window>

@@ -5,15 +5,16 @@ using System.Text;
 
 namespace WeatherAvalonia.Models
 {
-    internal class Weather
+    internal class WeatherModel
     {
         [JsonProperty("main")]
-        public MainWeatherInfo Main { get; set; }
+        public MainInfo Main { get; set; }
         [JsonProperty("wind")]
         public WindInfo Wind { get; set; }
+        [JsonProperty("weather")]
+        public List<WeatherInfo> Weather { get; set; }
     }
-
-    public class MainWeatherInfo
+    public class MainInfo
     {
         [JsonProperty("temp")]
         public double Temp { get; set; }
@@ -31,4 +32,13 @@ namespace WeatherAvalonia.Models
         [JsonProperty("gust")]
         public double Gust { get; set; }
     }
+
+    public class WeatherInfo
+    {
+        [JsonProperty("main")]
+        public string Main { get; set; }
+        [JsonProperty("description")]
+        public string Description { get; set; }
+    }
+    
 }

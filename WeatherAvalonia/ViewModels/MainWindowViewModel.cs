@@ -14,6 +14,12 @@ namespace WeatherAvalonia.ViewModels
         private string city;
 
         [ObservableProperty]
+        private string main;
+
+        [ObservableProperty]
+        private string description;
+
+        [ObservableProperty]
         private string temperature;
 
         [ObservableProperty]
@@ -42,6 +48,8 @@ namespace WeatherAvalonia.ViewModels
 
             if (result != null)
             {
+                Main = $"Main: {result.Weather[0].Main}";
+                Description = $"Description: {result.Weather[0].Description}";
                 Temperature = $"Temperature: {result.Main.Temp} °C";
                 Pressure = $"Pressure: {result.Main.Pressure} мм.рт.ст.";
                 FeelsLike = $"Feels Like: {result.Main.FeelsLike} °C";
@@ -50,7 +58,9 @@ namespace WeatherAvalonia.ViewModels
             }
             else
             {
-                Temperature = "City Doesn't exist";
+                Main = "City not found";
+                Description = null;
+                Temperature = null;
                 Pressure = null;
                 FeelsLike = null;
                 Speed = null;

@@ -7,8 +7,12 @@
         x:Class="WeatherAvalonia.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Background="LightBlue"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="WeatherAvalonia">
+        Icon="/Assets/appicon.png"
+        Title="WeatherAvalonia"
+        MaxHeight="900"
+        MaxWidth="900"
+        MinHeight="500"
+        MinWidth="500">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -23,8 +27,8 @@
    <Grid 
       HorizontalAlignment="Left" 
       VerticalAlignment="Top" 
-      Width="900" 
-      Height="500"
+      Width="1000" 
+      Height="250"
       ColumnDefinitions="Auto,*,*,*,*"
       RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto">
         
@@ -44,6 +48,7 @@
         <TextBox IsReadOnly="True" Text="{Binding Speed}" Grid.Column="1" Grid.Row="5"/>
         <TextBox IsReadOnly="True" Text="{Binding Gust}" Grid.Column="1" Grid.Row="6"/>
     </Grid>
+       
+         <Image Source="/Assets/weatherreport.webp" MaxHeight="600" HorizontalAlignment="Right" VerticalAlignment="Top"></Image>
     </StackPanel>
-
 </Window>

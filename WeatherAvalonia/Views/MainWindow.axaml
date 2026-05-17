@@ -21,16 +21,16 @@
     </Design.DataContext>
 
      <StackPanel Margin="20" Spacing="10">
-		<TextBox Text="{Binding City}" Watermark="Enter city..." Background="LightYellow"/>
+		<TextBox Text="{Binding City}" Watermark="Enter city..."/>
 
         <Button Content="Get weather" Command="{Binding GetWeatherCommand}" />
    <Grid 
       HorizontalAlignment="Left" 
       VerticalAlignment="Top" 
-      Width="1000" 
+      Width="1300" 
       Height="250"
       ColumnDefinitions="Auto,*,*,*,*"
-      RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto, Auto">
+      RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,70">
         
         <Image MaxHeight="35" Source="/Assets/mainweather.png" Grid.Column="0" Grid.Row="0"></Image>
         <Image MaxHeight="35" Source="/Assets/description.png" Grid.Column="0" Grid.Row="1"></Image>
@@ -47,8 +47,11 @@
         <TextBox IsReadOnly="True" Text="{Binding FeelsLike}" Grid.Column="1" Grid.Row="4"/>
         <TextBox IsReadOnly="True" Text="{Binding Speed}" Grid.Column="1" Grid.Row="5"/>
         <TextBox IsReadOnly="True" Text="{Binding Gust}" Grid.Column="1" Grid.Row="6"/>
+        <TextBox IsReadOnly="True" Text="{Binding Fact}" Grid.Column="1" Grid.Row="7"></TextBox>
     </Grid>
        
          <Image Source="/Assets/weatherreport.webp" MaxHeight="600" HorizontalAlignment="Right" VerticalAlignment="Top"></Image>
+         
     </StackPanel>
+
 </Window>
